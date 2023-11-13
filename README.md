@@ -6,6 +6,6 @@
 Here are some ideas to get you started:
 - 🔭 I’m currently working on ...
 -->
-My areas of interest include robotics, motion planning, reinforcement learning and computer vision. I mostly use ROS.
+My areas of interest include robotics, motion planning, control system, reinforcement learning and computer vision. I mostly use ROS.
 - 📫 How to reach me: singh7.anubhav@gmail.com
 - 😄 Pronouns: [he/him]
