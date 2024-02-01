@@ -6,7 +6,7 @@
 Here are some ideas to get you started:
 - 🔭 I’m currently working on ...
 -->
-My areas of interest include robotics, motion planning, control system, reinforcement learning and computer vision. I mostly use ROS.
+My areas of interest include robotics, motion planning, control system, reinforcement learning and computer vision. I mostly use ROS and gazebo physics engine for simulation. These days, I am working on quadruped robots. 
 - <img src="https://skillicons.dev/icons?i=stackoverflow" width="18" title="Stack Overflow"/> <a href="https://stackoverflow.com/users/5810950/anubhav-singh?tab=profile"> Stack Overflow</a>
 - 📫 How to reach me: singh7.anubhav@gmail.com
 - 😄 Pronouns: [he/him]
