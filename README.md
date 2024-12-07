@@ -7,7 +7,7 @@ Here are some ideas to get you started:
 - 🔭 I’m currently working on ...
 - 📫 How to reach me: 
 -->
-My areas of interest include robotics, control system, reinforcement learning and computer vision. I mostly use ROS and gazebo physics engine for simulation.  
+My areas of interest include robotics, control system, reinforcement learning and computer vision. These days I am using MuJoCo physics engine for my projects. Previously, I have mostly used ROS and gazebo physics engine for simulation.  
 - <img src="https://skillicons.dev/icons?i=stackoverflow" width="18" title="Stack Overflow"/> <a href="https://stackoverflow.com/users/5810950/anubhav-singh?tab=profile"> Stack Overflow</a>
 - 😄 Pronouns: [he/him]
 
