@@ -7,7 +7,7 @@ Here are some ideas to get you started:
 - 🔭 I’m currently working on ...
 - 📫 How to reach me: 
 -->
-My areas of interest include robotics, control system, reinforcement learning and computer vision. These days I am using Isaac Gym and MuJoCo physics engines for my projects. Previously, I have mostly used ROS and gazebo physics engine for simulation.  
+My areas of interest include robotics, control system and reinforcement learning. These days I am working with Isaac Gym, MuJoCo and PyBullet physics engines for my research projects. Previously, I have mostly used ROS and gazebo physics engine for simulation.  
 
 <!--<img src="https://skillicons.dev/icons?i=stackoverflow" width="18" title="Stack Overflow" style="vertical-align: middle; margin-right: 4px;" /> <a href="https://stackoverflow.com/users/5810950/anubhav-singh?tab=profile">Stack Overflow</a>-->
 
