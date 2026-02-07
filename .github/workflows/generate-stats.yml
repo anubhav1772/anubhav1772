@@ -41,18 +41,28 @@ jobs:
         run: |
           mkdir -p assets
       
-          curl -sL \
-            "https://github-readme-stats.vercel.app/api?username=anubhav1772&show_icons=true&theme=transparent&format=png&cache_seconds=21600" \
-            -o assets/stats.png
+          for i in 1 2 3; do
+            echo "Attempt $i..."
+            curl -sL \
+              "https://github-readme-stats.vercel.app/api?username=anubhav1772&show_icons=true&theme=transparent&format=png&cache_seconds=21600" \
+              -o assets/stats.png
       
-          # Validate PNG (must start with PNG magic bytes)
-          file assets/stats.png | grep -q PNG || exit 1
+            if file assets/stats.png | grep -q PNG; then
+              echo "Valid PNG generated"
+              exit 0
+            fi
+      
+            sleep 10
+          done
+      
+          echo "Failed to generate valid PNG after retries"
+          exit 1
 
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add assets/stats.svg
+          git add assets/stats.png
           git diff --cached --quiet || git commit -m "Update GitHub stats"
           git push
