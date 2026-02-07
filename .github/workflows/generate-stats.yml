@@ -16,11 +16,26 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      # - name: Generate stats SVG
+      #   run: |
+      #     mkdir -p assets
+      #     curl -s "https://github-readme-stats.vercel.app/api?username=anubhav1772&show_icons=true&theme=transparent" \
+      #       -o assets/stats.svg
+            
       - name: Generate stats SVG
         run: |
           mkdir -p assets
-          curl -s "https://github-readme-stats.vercel.app/api?username=anubhav1772&show_icons=true&theme=transparent" \
+      
+          curl -sL \
+            "https://github-readme-stats.vercel.app/api?username=anubhav1772&show_icons=true&theme=transparent&cache_seconds=21600" \
             -o assets/stats.svg
+      
+          # Validate SVG
+          if ! grep -q "<svg" assets/stats.svg; then
+            echo "Invalid SVG generated:"
+            head -n 20 assets/stats.svg
+            exit 1
+          fi
 
       - name: Commit and push if changed
         run: |
