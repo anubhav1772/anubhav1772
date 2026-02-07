@@ -22,20 +22,31 @@ jobs:
       #     curl -s "https://github-readme-stats.vercel.app/api?username=anubhav1772&show_icons=true&theme=transparent" \
       #       -o assets/stats.svg
             
-      - name: Generate stats SVG
+      # - name: Generate stats SVG
+      #   run: |
+      #     mkdir -p assets
+      
+      #     curl -sL \
+      #       "https://github-readme-stats.vercel.app/api?username=anubhav1772&show_icons=true&theme=transparent&cache_seconds=21600" \
+      #       -o assets/stats.svg
+      
+      #     # Validate SVG
+      #     if ! grep -q "<svg" assets/stats.svg; then
+      #       echo "Invalid SVG generated:"
+      #       head -n 20 assets/stats.svg
+      #       exit 1
+      #     fi
+
+      - name: Generate stats PNG
         run: |
           mkdir -p assets
       
           curl -sL \
-            "https://github-readme-stats.vercel.app/api?username=anubhav1772&show_icons=true&theme=transparent&cache_seconds=21600" \
-            -o assets/stats.svg
+            "https://github-readme-stats.vercel.app/api?username=anubhav1772&show_icons=true&theme=transparent&format=png&cache_seconds=21600" \
+            -o assets/stats.png
       
-          # Validate SVG
-          if ! grep -q "<svg" assets/stats.svg; then
-            echo "Invalid SVG generated:"
-            head -n 20 assets/stats.svg
-            exit 1
-          fi
+          # Validate PNG (must start with PNG magic bytes)
+          file assets/stats.png | grep -q PNG || exit 1
 
       - name: Commit and push if changed
         run: |
